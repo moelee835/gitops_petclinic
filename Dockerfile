@@ -1,4 +1,5 @@
-FROM eclipse-temurin:25-jdk-jammy
+FROM openjdk:17-jdk-slim
+LABEL maintainer="evenil0206@gmail.com"
 EXPOSE 8080
 ADD target/*.jar /app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
